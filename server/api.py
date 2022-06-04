@@ -68,8 +68,10 @@ def post_flags():
         "VALUES (?, ?, ?, ?, ?)",
         rows,
     )
-    metrics.RECIEVED_FLAGS.inc(cursor.rowcount)
     db.commit()
+
+    # Temporary update queued flags
+    metrics.QUEUED_FLAGS.inc(cursor.rowcount)
 
     return Response(status=201)
 
