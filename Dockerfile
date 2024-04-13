@@ -2,6 +2,7 @@ FROM python:3-slim
 
 # Install Poetry
 ENV POETRY_VERSION "1.1.13"
+RUN pip install six
 RUN pip install poetry==${POETRY_VERSION}
 RUN poetry config virtualenvs.create false
 
