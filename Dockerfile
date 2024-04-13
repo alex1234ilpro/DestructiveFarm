@@ -20,4 +20,4 @@ VOLUME [ "/var/destructivefarm" ]
 EXPOSE 5000
 
 # Run the application:
-ENTRYPOINT "cd ./server && ./server/start_server.sh"
+ENTRYPOINT "./start_server.sh"
