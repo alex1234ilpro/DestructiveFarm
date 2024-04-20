@@ -19,8 +19,8 @@ def submit_flags(flags, config):
 
     flags_to_send = [item.flag for item in flags]
     # app.logger.warning(flags_to_send)
-    resps = requests.put(f"http://{config['SYSTEM_HOST']}/flags",
-                         headers={"X-Team-Token": "fe56ef438aa1377c"},
+    resps = requests.put(f"http://{config['SYSTEM_HOST']}:{config['SYSTEM_PORT']}/flags",
+                         headers={"X-Team-Token": f"{config['TEAM_TOKEN']}"},
                          json=flags_to_send)
     #app.logger.warning(resps.text)
     resps = resps.json()
