@@ -5,7 +5,7 @@ CONFIG = {
     # fetch FLAG_FORMAT from sploits' stdout.
 
     # WARNING: THIS IS A FALLBACK DICTIONARY IF THE PROTOCOL DOES NOT PROVIDE UPDATED TEAMS.
-    'TEAMS': {'Team {}'.format(i): '10.60.{}.1'.format(i) for i in range(1, 87)},
+    'TEAMS': {'Team #{}'.format(i): '10.60.{}.1'.format(i) for i in range(1, 87)},
 
         
     'FLAG_FORMAT': r'[A-Z0-9]{31}=',
