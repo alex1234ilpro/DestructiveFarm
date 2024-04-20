@@ -13,7 +13,7 @@ CONFIG = {
     # This configures how and where to submit flags.
     # The protocol must be a module in protocols/ directory.
 
-    'SYSTEM_PROTOCOL': 'dummy',
+    'SYSTEM_PROTOCOL': 'ccit',
     # 'ATTACK_INFO_ENDPOINT': "http://#FIXME",
     'SYSTEM_HOST': '10.10.0.1',
     'SYSTEM_PORT': 8080,
