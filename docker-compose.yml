@@ -2,7 +2,10 @@ version: "3.8"
 
 services:
   farm:
-    image: ghcr.io/str4ngeb0yz/destructivefarm
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    #image: ghcr.io/str4ngeb0yz/destructivefarm
 
     volumes:
       - destructive_flags:/var/destructivefarm/
