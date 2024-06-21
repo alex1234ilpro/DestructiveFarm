@@ -3,7 +3,7 @@ from prometheus_client import Counter, Gauge, Summary
 from server.models import FlagStatus
 
 # Updated every submitter cycle
-QUEUED_FLAGS = Gauge("flags_queued", "Number of queued flags")
+QUEUED_FLAGS = Gauge("flags_queue", "Number of queued flags")
 FLAGS = {
     FlagStatus.ACCEPTED: Counter(
         "flags_accepted", "Number of sent flags", ["sploit", "team"]
@@ -13,6 +13,9 @@ FLAGS = {
     ),
     FlagStatus.REJECTED: Counter(
         "flags_rejected", "Numbers of rejected flags", ["sploit", "team"]
+    ),
+    FlagStatus.QUEUED: Counter(
+        "flags_queued", "Number of queued flags", ["sploit", "team"]
     ),
 }
 
